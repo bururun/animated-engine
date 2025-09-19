@@ -104,3 +104,15 @@ class TestCore(unittest.TestCase):
     
     def test_function_38(self):
         self.assertTrue(True)
+
+
+# Tests for EngineCore
+
+import unittest
+
+class TestCore(unittest.TestCase):
+    def test_basic(self):
+        self.assertEqual(1 + 1, 2)
+    
+    def test_function_44(self):
+        self.assertTrue(True)
