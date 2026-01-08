@@ -1,53 +1,25 @@
-# Helper functions
+"""
+Animated Engine - Code Refactoring
+"""
 
-def helper_function_13(x):
-    """Helper function for iteration 13."""
-    return x * 13
+from typing import List, Dict, Optional
 
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
+def optimize_algorithm(data: List[Dict]) -> List[Dict]:
+    """Optimized version with better performance"""
+    # Use list comprehension for better performance
+    return [
+        {**item, 'processed': True}
+        for item in data
+        if item.get('active', True)
+    ]
 
-
-# Helper functions
-
-def helper_function_17(x):
-    """Helper function for iteration 17."""
-    return x * 17
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_55(x):
-    """Helper function for iteration 55."""
-    return x * 55
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_69(x):
-    """Helper function for iteration 69."""
-    return x * 69
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_95(x):
-    """Helper function for iteration 95."""
-    return x * 95
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
+def extract_metadata(obj: Dict) -> Optional[Dict]:
+    """Extract metadata with type hints"""
+    if not isinstance(obj, dict):
+        return None
+    
+    return {
+        'id': obj.get('id'),
+        'timestamp': obj.get('timestamp'),
+        'version': obj.get('version', '1.0.0')
+    }
